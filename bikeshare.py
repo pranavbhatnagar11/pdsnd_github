@@ -176,7 +176,7 @@ def user_stats(df, city):
 	
 	Args:
 		df - Pandas DataFrame containing city data filtered by month and day
-		city - city of the df
+		city - city of the df selected by the user
 		
 	Returns:
         count_user_types, count_gender, earliest_year, recent_year, most_common_year"""
