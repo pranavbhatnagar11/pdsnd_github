@@ -148,7 +148,13 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """Displays statistics on the total and average trip duration.
+	
+	Args:
+		df - Pandas DataFrame containing city data filtered by month and day
+    
+	Returns:
+        total_travel_time, avg_travel_time"""
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -166,7 +172,14 @@ def trip_duration_stats(df):
 
 
 def user_stats(df, city):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+	
+	Args:
+		df - Pandas DataFrame containing city data filtered by month and day
+		city - city of the df
+		
+	Returns:
+        count_user_types, count_gender, earliest_year, recent_year, most_common_year"""
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
