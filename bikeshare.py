@@ -101,17 +101,17 @@ def time_stats(df):
     start_time = time.time()
 
     # display the most common month
-    most_common_month = df['month_of_year'].mode()[0]
-    print('Most Common Month:', most_common_month)
+    mcm = df['month_of_year'].mode()[0]
+    print('Most Common Month:', mcm)
     
     # display the most common day of week
-    most_common_day = df['day_of_week'].mode()[0]
-    print('Most Common Month:', most_common_day)
+    mcd = df['day_of_week'].mode()[0]
+    print('Most Common Month:', mcd)
 
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
-    most_common_hour = df['hour'].mode()[0]
-    print('Most Common Hour:', most_common_hour)
+    mch = df['hour'].mode()[0]
+    print('Most Common Hour:', mch)
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -131,17 +131,17 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-    most_common_start_station = df['Start Station'].mode()[0]
-    print('Most Common Start Station:', most_common_start_station)
+    mcss = df['Start Station'].mode()[0]
+    print('Most Common Start Station:', mcss)
 
     # display most commonly used end station
-    most_common_end_station = df['End Station'].mode()[0]
-    print('Most Common End Station:', most_common_end_station)
+    mced = df['End Station'].mode()[0]
+    print('Most Common End Station:', mced)
 
     # display most frequent combination of start station and end station trip
     df['Start_End']=df['Start Station']+' and '+df['End Station']
-    most_common_start_end_station = df['Start_End'].mode()[0]
-    print('Most Common Start to End Station:', most_common_start_end_station)
+    mcses = df['Start_End'].mode()[0]
+    print('Most Common Start to End Station:', mcses)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -160,12 +160,12 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # display total travel time
-    total_travel_time = sum(df['Trip Duration'])
-    print('Total Travel Time:', total_travel_time)
+    ttt = sum(df['Trip Duration'])
+    print('Total Travel Time:', ttt)
 
     # display mean travel time
-    avg_travel_time = np.mean(df['Trip Duration'])
-    print('Total Travel Time:', avg_travel_time)
+    avt = np.mean(df['Trip Duration'])
+    print('Total Travel Time:', avt)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
